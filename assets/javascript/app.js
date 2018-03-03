@@ -11,15 +11,14 @@
 
   });
 
-  var clockRunning = false;
   var counter;
   var clock;
 
 function countdown () {
-    $("#timeRemaing").show();
+    
     counter = 31;
-    clockRunning = true;
     clock = setInterval(Countdown, 1000);
+    $("#timeRemaing").show();
 
   }
 
@@ -91,11 +90,11 @@ function countdown () {
   function showQuestion (i) {
         countdown ();    
         currentQuestion = i;    
-        $("#question").text(triviaQuestion[i].question);
-        $("#answer0").text(triviaQuestion[i].choices[0]);
-        $("#answer1").text(triviaQuestion[i].choices[1]);
-        $("#answer2").text(triviaQuestion[i].choices[2]);
-        $("#answer3").text(triviaQuestion[i].choices[3]);
+        $("#question").html(triviaQuestion[i].question+"<br/><br/>");
+        $("#answer0").html("A) "+triviaQuestion[i].choices[0]+"<br/><br/>");
+        $("#answer1").html("B) "+triviaQuestion[i].choices[1]+"<br/><br/>");
+        $("#answer2").html("C) "+triviaQuestion[i].choices[2]+"<br/><br/>");
+        $("#answer3").html("D) "+triviaQuestion[i].choices[3]+"<br/><br/>");
         $("#answerImage").attr('src','#').hide();
         correctAnswer = triviaQuestion[i].correctAnswer;
       }
@@ -160,7 +159,7 @@ function checkWin() {
     if (currentQuestion === 7) {
         //Show Start Over Screen in 
         var startOver = setTimeout(function() {
-            $("#question").text("Done, here's how you did!");
+            $("#question").html("Done! Here's how you did..."+"<br/><br/>");
             $("#answer0").text("Correct Answers: "+totalCorrect);
             $("#answer1").text("Incorrect Answers: "+totalIncorrect);
             $("#answer2").text("Unanswered: "+totalUnanswered);
@@ -192,7 +191,7 @@ function checkWin() {
         $("#answerImage").show().attr('src','https://media.giphy.com/media/vYYyY4kBAKGha/giphy.gif');
     }
     if (currentQuestion === 6) {
-        $("#answerImage").show().attr('src','https://i.pinimg.com/736x/85/d1/f2/85d1f271e1872fb74c694de5073daa52--ross-and-rachel-friends-forever.jpg');
+        $("#answerImage").show().attr('src','http://25.media.tumblr.com/81f35d6524a4dd10120baeecef9bcbaf/tumblr_mibikxUdW21qeeqito6_250.gif');
     }
     if (currentQuestion === 7) {
         $("#answerImage").show().attr('src','https://images.hellogiggles.com/uploads/2016/07/18050929/noway.gif');
@@ -202,6 +201,9 @@ function checkWin() {
  $("#startOver").on("click", function() {
     $("#startOver").hide();
     showQuestion (0);
+    totalCorrect = 0;
+    totalIncorrect = 0;
+    totalUnanswered = 0;
 
   });
 

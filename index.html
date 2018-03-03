@@ -6,27 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stopwatch</title>
+    <title>Friends Trivia by Brittany Flanagan</title>
 
-    <!-- Our CSS style sheet -->
+    <!-- Reset CSS style sheet -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- My CSS style sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
 
   </head>
 
   <body>
     <!-- Div containing our stopwatch controls -->
-    <img src="assets/images/start-button.jpg" alt="start button" id="start">
     
-
-    <div id="timeRemaing"><p>Time Remaining: <span id="count"></span> Seconds</p></div>
-    <div id="question"></div>
-    <div id="answer0"></div>
-    <div id="answer1"></div>
-    <div id="answer2"></div>
-    <div id="answer3"></div>
-    <img id="answerImage"/>
-    <img src="assets/images/start-button.jpg" alt="startover button" id="startOver">
-    
+    <div class="mainBackground"></div>
+    <div class="centerText">
+            <div id="timeRemaing"><p>Time Remaining: <span id="count"></span> Seconds</p></div>
+        <img src="assets/images/Friends_header.png" alt="friends trivia" width="500px"/><br/><br/>
+        <img src="assets/images/start-button.png" alt="start button" id="start">
+        <div id="question"></div>
+        <div id="answer0" class"answertext"></div>
+        <div id="answer1" class"answertext"></div>
+        <div id="answer2" class"answertext"></div>
+        <div id="answer3" class"answertext"></div>
+        <img id="answerImage" height="250px"/>
+        <img src="assets/images/start-over.png" alt="startover button" id="startOver">
+    </div>
 
 
     <!-- jQuery -->

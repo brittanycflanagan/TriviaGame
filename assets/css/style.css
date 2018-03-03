@@ -1,5 +1,47 @@
 body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    background-repeat: repeat;
-    background-image: url(../images/spiration-light.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+   
+    background-image: url(../images/centralperk-singapore.jpg);
 }
+
+.mainBackground {
+    background-color: white;
+    opacity: .7;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    padding: 100px;
+    text-align: center;
+}
+.centerText {
+    
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    right: 10%;
+    bottom: 10%;
+    padding: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#timeRemaing {
+    font-size: 30px;
+}
+
+#question {
+    font-size: 25px;
+}
+
+.answertext {
+    font-size: 20px;
+}
+/*.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  } */
